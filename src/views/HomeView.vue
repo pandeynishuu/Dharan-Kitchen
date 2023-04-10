@@ -5,6 +5,10 @@
     <section>
         <carousel-component></carousel-component>
     </section>
+
+    <section>
+        
+    </section>
 </template-view>
 </template>
 
