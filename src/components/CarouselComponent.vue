@@ -72,7 +72,7 @@ export default {
 
 .panel_area {
    position: absolute;
-   z-index: 1000;
+   z-index: 99;
    width: 100%;
    text-align: center;
    bottom: 10%;
