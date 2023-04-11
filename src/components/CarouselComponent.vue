@@ -1,51 +1,50 @@
 <template>
-    <div>
-        <vue-flux
-        :options="fluxOptions"
-        :images="fluxImages"
-        :transitions="fluxTransitions"
-        ref="slider" >
-           <flux-pagination slot="pagination"></flux-pagination>
-     </vue-flux>
-     <div class="fixed">
-      <div class="text-block">
-        <form name="_resBBBox" action="https://live.ipms247.com/booking/book-rooms-hotelverandah" target="_blank" method="post">
-          <div class="bb_resbox" id="bb_resBookingBox" style="width: 100%; background: rgb(234, 236, 237); font-family: Arial, Helvetica, sans-serif; font-size: 12px; border: none;">
-            <p class="bbres_fieldset bbres_fieldset3" style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
-              <label class="cilabel">Arrival</label>
-              <input name="eZ_chkin" type="text" id="eZ_chkin" class="bbres_fieldset datepicker res_chkin2 hasDatepicker" placeholder="dd-mm-yy" readonly="readonly" style="font-family: Arial, Helvetica, sans-serif; color: rgb(91, 91, 91); background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);">
-              <button type="button" class="ui-datepicker-trigger ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" style="background-position: 1px -131px;">
-                <span class="ui-button-text">...</span>
-              </button>
-            </p>
-            <p class="bbres_fieldset bbres_fieldset4" style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
-              <label class="cilabel">Departure</label>
-              <input name="eZ_chkout" type="text" id="eZ_chkout" class="bbres_fieldset datepicker res_chkout2 hasDatepicker" placeholder="dd-mm-yy" readonly="readonly" style="font-family: Arial, Helvetica, sans-serif; color: rgb(91, 91, 91); background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);">
-              <button type="button" class="ui-datepicker-trigger ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" style="background-position: 1px -131px;">
-                <span class="ui-button-text">...</span>
-              </button>
-            </p>
-            <input name="eZ_Nights" id="eZ_Nights" type="hidden" class="txtbox res_nights2" value="1">
-            <input name="eZ_adult" id="eZ_adult" type="hidden" class="txtbox" value="1">
-            <input name="eZ_child" id="eZ_child" type="hidden" value="0" class="txtbox">
-            <input name="eZ_room" id="eZ_room" type="hidden" class="txtbox" value="1">
-            <input name="hidBodyLanguage" id="hidBodyLanguage" type="hidden" class="txtbox" value="en">
-            <p class="bbres_fieldset bbres_fieldset10 bb_btn" style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
-              <input type="button" name="bb_resBtn" id="bb_resBtn" value="Book Now" class="bbres_booknow bb_resBtn resbtn234" onclick="BB_valiDateFomData();" style="background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); color: rgb(91, 91, 91); font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 80px;">
-            </p>
-            <input name="calformat" id="calformat" type="hidden" class="txtbox" value="dd-mm-yy">
-            <input type="hidden" name="ArDt" id="ArDt" value="10-04-2023">
-            <input type="hidden" name="acturl" id="acturl" value="https://live.ipms247.com/booking/book-rooms-hotelverandah">
-          </div>
-        </form>
-    </div>
-    </div>
-    </div>
-    
+   <div>
+      <vue-flux :options="fluxOptions" :images="fluxImages" :transitions="fluxTransitions" ref="slider">
+         <flux-pagination slot="pagination"></flux-pagination>
+      </vue-flux>
+      <div class="search_panel">
+         <div class="panel_area">
+            <form action="" target="_blank" method="post">
+               <div class="res_box">
+                  <div class="res_row">
+                     <div class="col_md4">
+                        <p class="field_set" style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
+                           <label for="" class="field_label">Arrival</label>
+                           <input name="" type="text" id="" class="datepicker res_input" placeholder="dd-mm-yy"
+                              readonly="readonly"
+                              style="font-family: Arial, Helvetica, sans-serif; color: rgb(91, 91, 91); background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);">
+                           <button type="button" class="ui-datepicker-trigger" role="button"><span class="ui-button-text"></span></button>
+                        </p>
+                     </div>
+                     <div class="col_md4">
+                        <p class="field_set" style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
+                           <label for="" class="field_label">Arrival</label>
+                           <input name="" type="text" id="" class="datepicker res_input" placeholder="dd-mm-yy"
+                              readonly="readonly"
+                              style="font-family: Arial, Helvetica, sans-serif; color: rgb(91, 91, 91); background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255);">
+                           <button type="button" class="ui-datepicker-trigger" role="button"><span class="ui-button-text"></span></button>
+                        </p>
+                     </div>
+                     <div class="col_md4">
+                        <p class="field_set res_btn"
+                           style="font-family: Arial, Helvetica, sans-serif; color: rgb(255, 255, 255);">
+                           <input type="button" name="" id="resBtn" value="Book Now" class=""
+                              onclick="valiDateFormData();"
+                              style="background: rgb(255, 255, 255); border: 1px solid rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 80px;">
+                        </p>
+                     </div>
+
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
 </template>
 
 <script>
-   import { VueFlux, FluxPagination, Transitions } from 'vue-flux';
+import { VueFlux, FluxPagination, Transitions } from 'vue-flux';
 
 export default {
    components: {
@@ -58,55 +57,156 @@ export default {
          autoplay: true,
          height: "580px",
       },
-      fluxImages: [ 'https://www.dharankitchen.com/img/slide2.jpg','https://www.dharankitchen.com/img/slide3.jpg', 'https://www.dharankitchen.com/img/slide1.jpg', ],
+      fluxImages: ['https://www.dharankitchen.com/img/slide2.jpg', 'https://www.dharankitchen.com/img/slide3.jpg', 'https://www.dharankitchen.com/img/slide1.jpg',],
       fluxTransitions: {
          transitionBook: Transitions.transitionBook
       }
    })
 }
 </script>
-
 <style scoped>
+.search_panel {
+   width: 100%;
+   box-sizing: border-box;
+}
 
-	.bb_resbox
-	{
-		width: 60%!important; 
-		display: inline-block;
-	}
+.panel_area {
+   position: absolute;
+   z-index: 1000;
+   width: 100%;
+   text-align: center;
+   bottom: 10%;
+}
+
+.res_row {
+   display: flex;
+   flex-wrap: wrap;
+   /* padding: 15px 220px 25px 0 !important; */
+}
+
+@media (min-width: 768px) {
+   .col_md4 {
+      flex: 0 0 auto;
+      width: 33.33333333%;
+   }
+}
+
+.col_md4 {
+   padding: 10px;
+}
+.col_md4:last-child{
+   padding: 2px;
+}
+@media (min-width: 576px) {
+   .col_sm12 {
+      flex: 0 0 auto;
+      width: 100%;
+   }
+}
+
+form {
+   margin: 0;
+}
+
 @media (max-width: 1200px) {
-	.bb_resbox{
-		width: 70%!important;
-	}}
-	@media (max-width: 991px) {
-	.bb_resbox{
-		width: 100%!important;
-	}}
-    .entry-header{
-    background:#805a57 !important;
-    }
-    p.bbres_fieldset.bbres_fieldset10.bb_btn{
-    position: absolute;
-    padding: 0 !important;
-    right: 0;
-    top: 0;
+   .res_box {
+      width: 70% !important;
+   }
+}
+
+.res_box {
+      width: 100%;
+    display: inline-block;
+    max-width: 1000px;
+}
+
+.res_box {
+      display: inline-block;
+    position: relative;
+    padding: 15px 0px 15px 0 !important;
+}
+
+.res_box {
+   background: #e0e0e0;
+   font-size: 14px !important;
+   border: none;
+   padding: 0px 0px 10px 0px;
+   text-align: center;
+}
+
+p.field_set {
+   padding: 0 !important;
+   margin-right: 25px;
+}
+
+.res_box p {
+   padding: 10px 6px 0px 6px;
+   margin: 0px;
+   position: relative;
+   float: none;
+   display: inline-block;
+   width: auto;
+   vertical-align: bottom;
+   display: inline-block;
+   line-height: normal;
+}
+
+.res_box label {
+   color: #805a57 !important;
+   font-weight: normal;
+}
+
+.res_box label {
+   text-align: left;
+   line-height: normal;
+   clear: both;
+   margin-bottom: 7px;
+   width: 100%;
+   display: block;
+}
+.res_box input[type="text"] {
+    float: left;
+    clear: both;
+    padding: 7px 0px 7px 7px;
+}
+p.res_input input {
+    width: 100%!important;
+    padding: 10px!important;
+    border: none;
+}
+
+button.ui-datepicker-trigger {
+    padding: 6px 12px;
+    font-size: 14px!important;
+    font-weight: 400!important;
+    line-height: 1!important;
+    color: #555!important;
+    text-align: center!important;
+}
+
+button.ui-datepicker-trigger {
+    background: rgba(0, 0, 0, 0) url('../assets/lol.png') no-repeat scroll 0 0;
+    border: medium none;
+    float: left;
+    height: 21px;
+    width: 21px;
+    margin: 5px;
+}
+.res_btn{
+   width: 258px!important;
+    border-radius: 0;
+    cursor: pointer;
+    border: 0 !important;
+    font-size: 16px!important;
     height: 100%;
-    }
-    .bb_resbox  label{
-    color: #805a57 !important;
-    font-weight: normal;
-    }
-    .footer-menu{
-    opacity: 0.9;
-    /*background:linear-gradient(0deg,#805a57,#805a57),url(https://verandah-hotel.com/wp-content/themes/hotelverandah/images/ftr.png);   */
-    }
-  /*  #rooms::after {
-    background:url(); 
-    }*/
-    .footer {
-  /*  background:#805a57 ;*/
-    }
-    input#bb_resBtn
-    {
+    margin: 0px!important;
+    padding: 9px 13px !important;
+    background: #805a57 !important;
+    border: 1px solid #805a57 !important;
+    color: #fff!important;
+    text-transform: uppercase;
+}
+input#resBtn {
     margin: 0;
     width: 258px!important;
     border-radius: 0;
@@ -114,68 +214,27 @@ export default {
     border: 0 !important;
     font-size: 16px!important;
     height: 100%;
-    margin:0px!important;
-    padding:9px 13px !important;
-    background:#805a57 !important;
-    border:1px solid #805a57 !important;
-    }
-    /*input#bb_resBtn:hover
-    {
-    background:#805a57 !important;
-    border:1px solid #805a57 !important;
-    }*/
-    input#bb_resBtn:hover
-    {
-    background:#49201c !important;
-    border:1px solid #49201c  !important;
-    }
-    .ui-datepicker .ui-datepicker-header {
-    background:#805a57 !important;
-    }
-    .ui-datepicker td a.ui-state-active, .ui-datepicker td a.ui-state-hover {
-    background:#805a57 !important;
-    border:1px solid #805a57 !important;
-    }
-    .contactadd{
-    border:1px solid #805a57 !important;
-    }
-
-    @media(max-width: 991px){
-    input#bb_resBtn{
-        width: 100%!important;
-    }
-   
-         .bb_resbox  label{ color: #fff !important; }
-         input#bb_resBtn{
-          border: 1px solid #fff !important;
-          margin-top: 15px !important;
-         }
-        
-    }
-
-
-.bbres_fieldset5,.bbres_fieldset6 {
-width:49%!important
+    margin: 0px!important;
+    padding: 9px 13px !important;
+    background: #805a57 !important;
+    border: 1px solid #805a57 !important;
 }
 
-.fixed {
-position:relative;
-width:100%;
-margin:0;
-padding:20px
+input#resBtn {
+    width: 100%;
+    padding: 7px 13px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    transition: background 0.5s ease;
+    -moz-transition: background 0.5s ease;
+    -webkit-transition: background 0.5s ease;
+    -o-transition: background 0.5s ease;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #43B8BE;
+    background: #43B8BE;
 }
-
-div#bb_resBookingBox {
-    background: #403938!important;
-    padding: 30px 0 10px !important;
-}
-
-.bb_resbox p {
-line-height:1
-}
-
-.fixed {
-padding: 0;
-}
- 
 </style>
