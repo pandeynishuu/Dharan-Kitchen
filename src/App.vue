@@ -18,8 +18,6 @@
   --acent : #48CBF0;
   
 }
-h1{
-  color: var(--kParagraph)
-}
+
 
 </style>
